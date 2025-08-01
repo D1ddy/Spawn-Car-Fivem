@@ -2,7 +2,7 @@
     import Header from "./header.svelte";
     import Cars from "./cars.svelte";
     import Buttons from "./buttons.svelte";
-   
+    let {arrayOfVehicles} = $props(); 
 </script>
 <style>
     div{
@@ -18,6 +18,6 @@
 </style>
 <div>
     <Header />
-    <Cars />
+    <Cars {arrayOfVehicles}/>
     <Buttons />
 </div>

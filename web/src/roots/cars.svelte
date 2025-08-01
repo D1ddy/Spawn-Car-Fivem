@@ -1,5 +1,6 @@
 <script lang="ts">
-
+    import Car from "./car.svelte";
+    let {arrayOfVehicles} = $props();
 </script>
 <style>
     div{
@@ -14,5 +15,7 @@
     }
 </style>
 <div>
-
+    {#each arrayOfVehicles as carName}
+        <Car {carName}/>
+    {/each}
 </div>

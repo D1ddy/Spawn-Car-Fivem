@@ -19,7 +19,6 @@
     .buttons{
         width: 20vh;
         height: 5vh;
-        cursor: pointer;
         background-color: rgb(197, 42, 42);
         border: none;
         border-radius: 50px;
@@ -34,9 +33,12 @@
     }
 </style>
 <div>
-    <button id="randomCar" class="buttons" onclick="{() => {
+    <button id="closeCar" class="buttons" onclick="{() => {
         fetchNui('close');
         visible.set(false);
+    }}">Close</button>
+    <button id="randomCar" class="buttons" onclick="{() => {
+        fetchNui('getRandomCar');
+        visible.set(false);
     }}">Random</button>
-    <button id="selectCar" class="buttons">Select</button>
 </div>

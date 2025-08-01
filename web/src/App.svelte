@@ -10,6 +10,10 @@
 		isVisible = data;
 		visible.set(true);
 	})
+		let arrayOfVehicles:Array<string> = $state([]);
+	useNuiEvent('getCars',(data:Array<string>) => { 
+		arrayOfVehicles = data;
+	})
 </script>
 <style>
 	main{
@@ -22,6 +26,6 @@
 </style>
 <main>
 	{#if isVisible}
-	<CarMain />
+	<CarMain arrayOfVehicles = {arrayOfVehicles}/>
 	{/if}
 </main>
