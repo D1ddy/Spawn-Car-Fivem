@@ -3,10 +3,10 @@ local arrayOfVehicles = {}
 local isPlayerAdmin = false
 RegisterNetEvent('spawn-car-fivem:client:adminStatus')
 AddEventHandler('spawn-car-fivem:client:adminStatus', function(isAdmin)
-    isPlayerAdmin = isAdmin
-    
+    isPlayerAdmin = isAdmin    
 end)
 RegisterCommand('car', function()
+    
     TriggerServerEvent('spawn-car-fivem:server:adminStatus')
     if isPlayerAdmin then
         for i = 1, 6, 1 do
